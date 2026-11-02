@@ -8,9 +8,9 @@ import Sales from './pages/Sales';
 import Transactions from './pages/Transactions';
 import Purchases from './pages/Purchases';
 import AdGenerator from './pages/AdGenerator';
-import Subscription from './pages/Subscription'; // <-- L'erreur était ici
+import Subscription from './pages/Subscription';
+import ShopSettings from './pages/ShopSettings'; // <-- C'est ici que l'erreur se trouvait
 import ProtectedRoute from './components/layout/ProtectedRoute';
-import ShopSettings form './pages/ShopSettings';
 
 function App() {
   return (
@@ -20,7 +20,6 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/settings" element={<ShopSettings />} />
 
         {/* Routes protégées */}
         <Route element={<ProtectedRoute />}>
@@ -31,6 +30,7 @@ function App() {
           <Route path="/purchases" element={<Purchases />} />
           <Route path="/ai-ads" element={<AdGenerator />} />
           <Route path="/subscription" element={<Subscription />} />
+          <Route path="/settings" element={<ShopSettings />} />
         </Route>
       </Routes>
     </BrowserRouter>
