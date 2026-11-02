@@ -17,7 +17,7 @@ export default function ShopSettings() {
     const fetchShop = async () => {
       if (!user) return;
       
-      const { data, error } = await supabase
+      const { data } = await supabase
         .from('shop_members')
         .select('shop_id, shops(name, address)')
         .eq('user_id', user.id)
@@ -53,7 +53,6 @@ export default function ShopSettings() {
       setMessage("Erreur lors de la sauvegarde : " + error.message);
     } else {
       setMessage("Boutique mise à jour avec succès !");
-      // On recharge la page après 1.5s pour mettre à jour le nom dans l'en-tête
       setTimeout(() => window.location.reload(), 1500);
     }
     setIsSaving(false);
