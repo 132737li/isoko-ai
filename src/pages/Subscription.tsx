@@ -3,7 +3,7 @@ import { supabase } from '../lib/supabase';
 import { useAuthStore } from '../stores/authStore';
 import { Button } from '../components/ui/Button';
 import { Link, useSearchParams } from 'react-router-dom';
-import { Check, X } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const PLANS = [
   { id: 'free', name: 'Gratuit', price: '0 BIF', features: ['Jusqu\'à 30 produits', 'Gestion de base', 'Rapports limités'], icon: '🌱' },
