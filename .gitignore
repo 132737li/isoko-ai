@@ -1,4 +1,26 @@
+# =========================================
+# Dossiers de dépendances et de build
+# =========================================
+node_modules
+dist
+dist-ssr
+*.local
+
+# =========================================
+# Variables d'environnement (SÉCURITÉ)
+# =========================================
+# Ne jamais envoyer les fichiers .env sur Git !
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Mais on garde le fichier d'exemple
+!.env.example
+
+# =========================================
 # Logs
+# =========================================
 logs
 *.log
 npm-debug.log*
@@ -7,12 +29,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# =========================================
+# Éditeurs et Système d'exploitation
+# =========================================
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,3 +41,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# =========================================
+# Supabase (CLI et configuration locale)
+# =========================================
+supabase/.branches
+supabase/.temp
+supabase/.env
+
+# =========================================
+# Vercel
+# =========================================
+.vercel
+
+# =========================================
+# Tests (Playwright, Vitest, Cypress)
+# =========================================
+playwright-report
+test-results
+coverage
+.vitest

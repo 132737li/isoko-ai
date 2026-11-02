@@ -10,6 +10,7 @@ import Purchases from './pages/Purchases';
 import AdGenerator from './pages/AdGenerator';
 import Subscription from './pages/Subscription'; // <-- L'erreur était ici
 import ProtectedRoute from './components/layout/ProtectedRoute';
+import ShopSettings form './pages/ShopSettings';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/settings" element={<ShopSettings />} />
 
         {/* Routes protégées */}
         <Route element={<ProtectedRoute />}>

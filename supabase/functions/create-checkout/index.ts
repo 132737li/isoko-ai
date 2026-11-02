@@ -7,7 +7,7 @@ serve(async (req) => {
   try {
     const { plan } = await req.json()
     const apiKey = Deno.env.get('ULTRANER_API_KEY')
-    const siteUrl = Deno.env.get('SITE_URL') || 'http://localhost:5173'
+    const siteUrl = Deno.env.get('SITE_URL') || 'https://isokoai-woad.vercel.app'
 
     if (!apiKey) throw new Error("Clé API Ultraner manquante.")
 
